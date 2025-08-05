@@ -1,23 +1,107 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <link rel="stylesheet" href="styles.css">
-        <title> Karoline Mullis Portfolio </title>
-        <meta charset="utf-8">
-        <meta name="viewpoint" content="width=device-width, initial-scale=1">
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: "Lato", sans-serif;}
 
-    </head>
-</div class="tab">
-    <button class="tablink" onclick="open('About Me', this, 'blue')" id="defaultOpen">About Me</button>
-    <button class="tablink" onclick="openCity('Projects', this, 'blue')">Projects</button>
-<div id="About Me" class="tabcontent">
+.tablink {
+  background-color:rgb(208, 230, 250);
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  color:black;
+  float:left;
+  border: 1px solid white;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 50%;
+}
+
+.tablink:hover {
+  background-color: cornflowerblue;
+}
+
+/* Style the tab content */
+.tabcontent {
+  color: white;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  display: none;
+  border: 1px soild white;
+  padding-bottom: 160px;
+  text-align: center;
+}
+
+h2{
+    color:black;
+    background-color: cornflowerblue;
+    font-size: 200%;
+    text-align: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#AboutMe {background-color: white;
+    color: black;
+}
+#Projects {background-color: white;
+    color: black;
+}
+
+footer{
+    font-size: smaller;
+    text-align: center;
+    padding: 75px
+
+}
+
+
+
+</style>
+</head>
+<body>
+
+<h2> Karoline Mullis's Portfolio</h2>
+
+<div id="AboutMe" class="tabcontent" >
   <h1>About Me</h1>
-  <p>Hi! My name is Karoline Mullis. I am majoring in mechanical engineering at the University of Florida's College of Engineering. I am interested in the autonomotive industry and motorsports.</p>
+  <img src="IMG_0011.jpg"; width="200px" style="float:right; margin-left: 16px; margin-bottom: 8px;">
+  <p>Hi! My name is Karoline Mullis. As an aspiring mechanical engineer at the University of Florida, I seek to further my learning through hands-on and real-world engineering experiences. I strive to serve those around me, while gaining instrumental knowledge that will shape me into a successful and well-rounded engineer.</p>
 </div>
 
 <div id="Projects" class="tabcontent">
   <h1>Projects</h1>
-  <p>Paris is the capital of France.</p>
+  <p><strong> Inprogress Projects:</strong></p> 
+  <p> - OnShape Key Chain 3D mdoeling</p>
+  <p><br></p>
+  <p> <strong>Completed Projects:</strong></p>
+  <p> - Soldering small circut coards</p>
+  <img scr="KM.JPG">
+</div>
 
 
+<button class="tablink" onclick="openCity('AboutMe', this, 'cornflowerblue')" id="defaultOpen">About Me</button>
+<button class="tablink" onclick="openCity('Projects', this, 'cornflowerblue')">Projects</button>
 
+<script>
+function openCity(cityName,elmnt,color) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].style.backgroundColor = "";
+  }
+  document.getElementById(cityName).style.display = "block";
+  elmnt.style.backgroundColor = color;
+
+}
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>
+<footer>&#169; 2025 Karoline Mullis <br> karoline.mullis@ufl.edu &#9830; KarolineMullis.github.io &#9830; 
+www.linkedin.com/in/karoline-mullis  </footer>
+   
+</body>
+</html> 
